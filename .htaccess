@@ -1,0 +1,16 @@
+# Disable directory browsing
+Options -Indexes
+
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "DENY"
+
+    # Enforce content type
+    Header always set X-Content-Type-Options "nosniff"
+   
+    # Remove server signature headers
+    Header unset X-Powered-By
+</IfModule>
+
+# Hide server version info
+ServerSignature Off
