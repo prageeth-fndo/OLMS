@@ -1,0 +1,15 @@
+.login {
+    background-image: url(inc/img/3.jpg);
+    margin-bottom: 30px;
+    padding: 50px;
+    padding-bottom: 70px;
+}
+
+.reg-header h2 {
+    color: #DDDDDD;
+    z-index: 999999;
+}
+
+.login-body h4 {
+    margin-bottom: 20px;
+}
