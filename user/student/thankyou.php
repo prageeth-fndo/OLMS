@@ -30,7 +30,7 @@
 		<p><a href="registration.php" style="text-decoration: underline; font-weight: bold; font-size: 20px">Register Again</a></p>
     </div>
 
-    <script src="inc/js/jquery-2.2.4.min.js"></script>
+    <script src="inc/js/jquery-3.7.1.min.js"></script>
     <script src="inc/js/bootstrap.min.js"></script>
 </body>
 </html>
