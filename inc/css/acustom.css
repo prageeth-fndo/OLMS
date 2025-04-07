@@ -8,6 +8,13 @@
     min-height: 90vh;
 }
 
+.registration {
+    background-image: url(../img/3.jpg);
+    margin-bottom: 30px;
+    padding: 50px;
+    padding-bottom: 70px;
+}
+
 .reg-header h2 {
     color: #DDDDDD;
     z-index: 999999;
