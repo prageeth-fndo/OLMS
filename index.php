@@ -1,80 +1,117 @@
 <?php
-    session_start();
-    include 'inc/connection.php';
+session_start();
+include 'inc/connection.php';   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Library Management System</title>
-    <link rel="stylesheet" href="inc/css/bootstrap.min.css">
-    <link rel="stylesheet" href="inc/css/fontawesome-all.min.css">    
-    <link rel="stylesheet" href="inc/css/pro1.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet"> 
-    <link rel="stylesheet" href="inc/css/acustom.css">  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .navbar {
+      background-color: #1976d2;
+    }
+    .navbar-brand, .nav-link, .navbar-toggler-icon {
+      color: white !important;
+    }
+    .hero-section {
+      background-color: #2196f3;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+    }
+    .card {
+      border: none;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .card i {
+      font-size: 48px;
+      color: #1976d2;
+    }
+    .footer {
+      background-color: #eeeeee;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="login registration">
-        <div class="wrapper">
-            <div class="reg-header text-center">
-                <h2>Library management system</h2>
-                <div class="gap-30"></div>
-                <div class="gap-30"></div>
-            </div>
-            <div class="gap-30"></div>
-            <div class="login-content">
-                <div class="login-body">
-                    <h4>Librarian Login Form</h4>
-                    <form action="" method="post">
-                        <div class="mb-20">
-                            <input type="text" name="username" class="form-control" placeholder="Username" required=""/>
-                        </div>
-                        <div class="mb-20">
-                            <input type="password" name="password" class="form-control" placeholder="Password" required=""/>
-                        </div>
-                        <div class="mb-20">
-                            <input class="btn btn-info submit" type="submit" name="login" value="Login">
-                            
-                        </div>
-                    </form>
-                </div>
-                <?php
-                if (isset($_POST["login"])) {
-                    $count=0;
-                    
-                    $username = $_POST["username"];
-                    $password = $_POST["password"];
-                
-                    // Use prepared statement to prevent SQL injection
-                    $stmt = $link->prepare("SELECT * FROM lib_registration WHERE username = ? AND password = ?");
-                    $stmt->bind_param("ss", $username, $password); // Bind two string parameters
-                    $stmt->execute();
-                    $res = $stmt->get_result();
 
-                    $count = mysqli_num_rows($res);
-                    if ($count==0) {
-                        ?>
-                        <div class="alert alert-warning">
-                            <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
-                        </div>
-                    <?php
-                    }
-                    else{
-                    $_SESSION["username"] = $_POST["username"];
-                    header("Location: dashboard.php");
-                    exit();
-                    }
-                }
-                ?>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-book-reader me-2"></i>Library System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to the Library</h1>
+      <p class="lead">Manage books, users, and transactions with ease.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <div class="container mt-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-sm">
+          <i class="fas fa-search mb-3"></i>
+          <h5>Search Books</h5>
+          <p>Quickly search for books by title, author, or ISBN.</p>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-sm">
+          <i class="fas fa-book-open mb-3"></i>
+          <h5>Issue & Return</h5>
+          <p>Manage book issuing and returns efficiently.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-sm">
+          <i class="fas fa-users mb-3"></i>
+          <h5>Manage Users</h5>
+          <p>Add, update, or remove users with ease.</p>
+        </div>
+      </div>
     </div>
-    <div class="footer text-center">
-        <p>&copy; All rights reserved utter pompously</p>
-    </div>
+  </div>
 
-<script src="inc/js/jquery-3.7.1.min.js"></script>
-<script src="inc/js/bootstrap.min.js"></script>
-<script src="inc/js/custom.js"></script>
+  <!-- Footer -->
+  <div class="footer mt-5">
+    &copy; 2025 Library Management System. All rights reserved.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

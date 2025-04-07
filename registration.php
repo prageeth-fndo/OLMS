@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
     <link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="inc/css/pro1.css">
+    <link rel="stylesheet" href="inc/css/acustom.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .registration{
@@ -34,7 +35,7 @@
             </div>
             <div class="gap-40"></div>
             <div class="reg-body">
-                <h4 style="text-align: center; margin-bottom: 25px;">Librarian registration form</h4>
+                <h4 class="regFrm">Librarian registration form</h4>
                 <form action="" class="form-inline" method="post">
                     <div class="form-group">
                         <label for="name" class="text-right">Name <span>*</span></label>
@@ -82,7 +83,7 @@
         <p>&copy; All rights reserved utter pompously</p>
     </div>
 
-    <script src="inc/js/jquery-3.7.1.min.js"></script>
+    <script src="inc/js/jquery-2.2.4.min.js"></script>
     <script src="inc/js/bootstrap.min.js"></script>
     <script src="inc/js/custom.js"></script>
 </body>
