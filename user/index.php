@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="dist/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="dist/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="dist/css/animate.css">
+    <link rel="stylesheet" href="inc/css/acustom.css">
 	<link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
@@ -42,7 +43,7 @@
 	<!--Start slider-->
 	<div class="slider">
 		<div class="slide-carousel owl-carousel">
-			<div class="item" style="background-image:url(dist/img/3.jpg);">
+			<div class="item" class="indexImg3">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -57,7 +58,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item" style="background-image:url(dist/img/2.jpg);">
+			<div class="item" class="indexImg2">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -72,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item" style="background-image:url(dist/img/1.jpg);">
+			<div class="item" class="indexImg1">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -87,7 +88,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item" style="background-image:url(dist/img/4.jpg);">
+			<div class="item" class="indexImg4">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -102,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item" style="background-image:url(dist/img/5.jpg);">
+			<div class="item" class="indexImg5">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -117,7 +118,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item" style="background-image:url(dist/img/6.jpg);">
+			<div class="item" class="indexImg6">
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
@@ -139,7 +140,7 @@
 		<p>&copy; All rights reserved utter pompously</p>
 	</div>			
 
-	<script src="dist/js/jquery-3.7.1.min.js"></script>
+	<script src="dist/js/jquery-2.2.4.min.js"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
 	<script src="dist/js/fontawesome.min.js"></script>
 	<script src="dist/js/owl.carousel.min.js"></script>

@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="inc/css/bootstrap.min.css">
 	<link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="inc/css/pro1.css">
+    <link rel="stylesheet" href="inc/css/acustom.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .login{
@@ -74,7 +75,7 @@
                         if ($count==0) {
                             ?>
                                 <div class="alert alert-warning">
-                                    <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
+                                    <strong class="alrtWrnC">Invalid!</strong> <span class="alrtWrnR">Username Or Password.</span>
                                 </div>
                             <?php
                         }
@@ -91,7 +92,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="inc/js/jquery-3.7.1.min.js"></script>
+	<script src="inc/js/jquery-2.2.4.min.js"></script>
 	<script src="inc/js/bootstrap.min.js"></script>
 	<script src="inc/js/custom.js"></script>
 </body>

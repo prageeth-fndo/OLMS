@@ -1,15 +1,105 @@
 .login {
     background-image: url(../img/3.jpg);
+    background-size: cover;
+    background-position: center center;
     margin-bottom: 30px;
     padding: 50px;
     padding-bottom: 70px;
+    min-height: 90vh;
 }
 
 .reg-header h2 {
-    color: #ffffff;
-    z-index: 999999;    
+    color: #DDDDDD;
+    z-index: 999999;
 }
 
 .login-body h4 {
     margin-bottom: 20px;
+}
+
+.indexImg1 {
+    background-image: url(../dist/img/1.jpg);
+}
+
+.indexImg2 {
+    background-image: url(../dist/img/2.jpg);
+}
+
+.indexImg3 {
+    background-image: url(../dist/img/3.jpg);
+}
+
+.indexImg4 {
+    background-image: url(../dist/img/4.jpg);
+}
+
+.indexImg5 {
+    background-image: url(../dist/img/5.jpg);
+}
+
+.indexImg6 {
+    background-image: url(../dist/img/6.jpg);
+}
+
+.alert-head {
+    color: #333333;
+}
+
+.error-span {
+    color: red;
+    font-weight: bold;
+}
+
+.regFrm {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.binClr {
+    color: red
+}
+
+.refrshClr {
+    color: #fff;
+}
+
+.bookIsue {
+    color: #000;
+}
+
+.alrtWrnC {
+    color: #333;
+}
+
+.alrtWrnR {
+    color: red;
+    font-weight: bold;
+}
+
+.alrtWrnG {
+    color: green;
+    font-weight: bold;
+}
+
+.thnk {
+    line-height: 1.5
+}
+
+.thnkMrgin {
+    margin-top: 80px;
+}
+
+.thnkReg {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.contct {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.ifrme {
+    border: 0;
 }

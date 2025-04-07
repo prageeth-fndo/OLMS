@@ -1,8 +1,11 @@
 	<?php 
 		 session_start();
 		if (!isset($_SESSION["username"])) {
-            header("Location: login.php");
-            exit();
+            ?>
+                <script type="text/javascript">
+                    window.location="login.php";
+                </script>
+            <?php
         }
         include 'inc/header.php';
         include 'inc/connection.php';
@@ -99,24 +102,9 @@
                 $filepath="books-file/".$newfilename2;
                 move_uploaded_file($_FILES["f1"]["tmp_name"],$imagepath);
                 move_uploaded_file($_FILES["file"]["tmp_name"],$filepath);
-                
-                //SQLi
-                $stmt = $link->prepare("INSERT INTO add_book VALUES('', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param(
-                    "ssssssssss", 
-                    $_POST['booksname'],
-                    $imagepath,
-                    $_POST['bauthorname'],
-                    $_POST['bpubname'],
-                    $_POST['bpurcdate'],
-                    $_POST['bprice'],
-                    $_POST['bquantity'],
-                    $_POST['bavailability'],
-                    $_SESSION['username'],
-                    $filepath
-                );                
-                $stmt->execute();
-                
+
+                 mysqli_query($link, "insert into add_book values('','$_POST[booksname]','$imagepath','$_POST[bauthorname]','$_POST[bpubname]','$_POST[bpurcdate]','$_POST[bprice]','$_POST[bquantity]','$_POST[bavailability]','$_SESSION[username]','$filepath')");
+
             }
         ?>
 			

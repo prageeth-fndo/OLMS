@@ -7,9 +7,12 @@
             </script>
         <?php
     }
+
+    echo '<link rel="stylesheet" href="inc/css/acustom.css">';
+
     include 'inc/header.php';
     include 'inc/connection.php';
-include 'inc/tfunction.php';
+    include 'inc/tfunction.php';
  ?>
 	<!--dashboard area-->
 	<div class="dashboard-content">
@@ -36,7 +39,7 @@ include 'inc/tfunction.php';
                         <?php if(isset($error_m)):?>
                             <span class="errort"> <?php echo $error_m; ?></span>
                         <?php endif ?>
-                        <h4 style="text-align: center; margin-bottom: 25px;">Teacher registration form</h4>
+                        <h4 class="regFrm">Teacher registration form</h4>
                         <form action="" class="form-inline" method="post">
                             <div class="form-group">
                                 <label for="name" class="text-right">Name <span>*</span></label>
