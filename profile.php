@@ -1,11 +1,8 @@
 <?php 
     session_start();
     if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
     $page = 'profile';
     include 'inc/header.php';
@@ -112,11 +109,8 @@
                                    phone='$_POST[phone]',
                                    address='$_POST[address]' 
                                    where username='$_SESSION[username]'");
-                                    ?>
-                                        <script type="text/javascript">
-                                            window.location="profile.php";
-                                        </script>
-                                    <?php
+                                   header("Location: profile.php");
+                                   exit();
                               }
                             ?>
 		                </div>    

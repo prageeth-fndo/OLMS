@@ -1,15 +1,12 @@
-	<?php 
-		 session_start();
-		if (!isset($_SESSION["username"])) {
-            ?>
-                <script type="text/javascript">
-                    window.location="login.php";
-                </script>
-            <?php
+    <?php 
+        session_start();
+        if (!isset($_SESSION["username"])) {
+            header("Location: login.php");
+            exit();
         }
         include 'inc/header.php';
         include 'inc/connection.php';
-	 ?>
+    ?>
 			
 	<!--dashboard area-->
 	<div class="dashboard-content">

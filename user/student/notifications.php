@@ -1,13 +1,9 @@
     <?php 
-      session_start();
-        if (!isset($_SESSION["student"])) {
-            ?>
-                <script type="text/javascript">
-                    window.location="login.php";
-                </script>
-            <?php
-        }
-        include 'inc/header.php';
+    session_start();
+                if (!isset($_SESSION["student"])) {
+                        header("Location: login.php");
+                        exit();
+                }    include 'inc/header.php';
         include 'inc/connection.php';
         mysqli_query($link,"update message set read1='y' where rusername='$_SESSION[student]'");
 

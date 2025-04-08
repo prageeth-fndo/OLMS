@@ -1,12 +1,9 @@
 <?php 
-     session_start();
-    if(!isset($_SESSION["student"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
-    }
+	session_start();
+	if (!isset($_SESSION["student"])) {
+		header("Location: login.php");
+		exit();
+	}
     $page ='home';
     include 'inc/header.php';
     include 'inc/connection.php';

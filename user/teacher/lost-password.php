@@ -34,20 +34,7 @@ if (isset($_POST["reset-password"])) {
     <meta charset="UTF-8">
     <title>Password Reset PHP</title>
     <link rel="stylesheet" href="main.css">
-    <style>
-        body{
-            background: lightblue;
-            padding: 100px;
-        }
-        .thankyou-content{
-            width: 850px;
-            margin: 0 auto;
-        }
-        img{
-            margin-top: 15px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="inc/css/acustom.css">
 </head>
 <body>
 <form class="login-form" action="lost-password.php" method="post">
