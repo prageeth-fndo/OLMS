@@ -1,15 +1,17 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
+
+    echo '<link rel="stylesheet" href="inc/css/acustom.css">';
+
     include 'inc/header.php';
     include 'inc/connection.php';
  ?>
+
+
 	<!--dashboard area-->
 	<div class="dashboard-content">
 		<div class="dashboard-header">
@@ -53,7 +55,7 @@
                                                     echo "<td>"; echo $row["booksname"]; echo "</td>";
                                                     echo "<td>"; echo $row["fine"]; echo "</td>";
 													echo "<td>";
-													?><a href="delete-fine.php?id=<?php echo $row["id"]; ?> " style="color: red"><i class="fas fa-trash"></i></a><?php
+													?><a href="delete-fine.php?id=<?php echo $row["id"]; ?> " class="binClr"><i class="fas fa-trash"></i></a><?php
 													echo "</td>";
                                                     echo "</tr>";
                                                 }

@@ -1,12 +1,12 @@
 <?php 
     session_start();
     if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
+
+    echo '<link rel="stylesheet" href="inc/css/acustom.css">';
+
     include 'inc/header.php';
     include 'inc/connection.php';
     $rdate = date("d/m/Y", strtotime("+30 days"));
@@ -149,7 +149,7 @@
                                        if ($qty==0) {
                                           ?>
                                             <div class="alert alert-danger col-lg-6 col-lg-push-3">
-                                            <strong style="">This book is not available.</strong>
+                                            <strong class="bookIsue">This book is not available.</strong>
                                             </div>
                                           <?php
                                        }
@@ -157,12 +157,9 @@
                                           mysqli_query($link, "insert into t_issuebook values('','$_SESSION[utype]','$_SESSION[idno]','$_POST[name]','$_POST[teaches]','$_POST[phone]','$_POST[email]','$_POST[booksname]','$_POST[booksissuedate]','$_POST[booksreturndate]','$_SESSION[tusername]') ");
                                           mysqli_query($link, "update add_book set books_availability=books_availability-1 where books_name='$_POST[booksname]'");
 
-                                          ?>
-                                              <script type="text/javascript">
-                                                  alert("books issued successfully");
-                                                  window.location.href=window.location.href;
-                                              </script>
-                                        <?php
+                                          echo '<div class="alert alert-success col-lg-6 col-lg-push-3">';
+                                          echo '<strong class="bookIssue">Books issued successfully.</strong>';
+                                          echo '</div>';
                                         }
                                     }
                                     ?>

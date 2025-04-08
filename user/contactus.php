@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="dist/css/animate.css">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+	<link rel="stylesheet" href="inc/css/acustom.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
@@ -68,13 +69,13 @@
 		</div>
 	</div>
 	<div class="map-responsive mapw">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459.6851149337604!2d89.543789542394!3d22.821690263603124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9aaf52672c3d%3A0x7457988431037161!2sSonadanga+R%2FA%2C+(2nd+Phase).%2C+Khulna!5e0!3m2!1sen!2sbd!4v1523867957528" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459.6851149337604!2d89.543789542394!3d22.821690263603124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9aaf52672c3d%3A0x7457988431037161!2sSonadanga+R%2FA%2C+(2nd+Phase).%2C+Khulna!5e0!3m2!1sen!2sbd!4v1523867957528" width="600" height="450" frameborder="0" class="ifrme" allowfullscreen></iframe>
 	</div>
     <div class="footer text-center">
-        <p style="margin: 20px; font-weight: bold;"><span>copyright &copy; utter pompously all rights reserved</span></p>
+        <p class="contct"><span>copyright &copy; utter pompously all rights reserved</span></p>
     </div>
 
-	<script src="dist/js/jquery-3.7.1.min.js"></script>
+	<script src="dist/js/jquery-2.2.4.min.js"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
 	<script src="dist/js/owl.carousel.min.js"></script>
 	<script src="dist/js/owl.animate.js"></script>

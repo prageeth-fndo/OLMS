@@ -10,22 +10,9 @@
 	<link rel="stylesheet" href="inc/css/bootstrap.min.css">
 	<link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="inc/css/pro1.css">
+    <link rel="stylesheet" href="inc/css/acustom.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
-    <style>
-        .login{
-            background-image: url(inc/img/3.jpg);
-            margin-bottom: 30px;
-            padding: 50px;
-            padding-bottom: 70px;
-        }
-        .reg-header h2{
-            color: #DDDDDD;
-            z-index: 999999;
-        }
-        .login-body h4{
-            margin-bottom: 20px;
-        }
-    </style>
+
 </head>
 <body>
 	
@@ -76,7 +63,7 @@
                         if ($count==0) {
                             ?>
                                 <div class="alert alert-warning">
-                                <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
+                                <strong class="alrtWrnC">Invalid!</strong> <span class="alrtWrnR">Username Or Password.</span>
                                 </div>
                             <?php
                         }
@@ -98,7 +85,7 @@
         <p>&copy; All rights reserved utter pompously</p>
     </div>
 
-	<script src="inc/js/jquery-3.7.1.min.js"></script>
+	<script src="inc/js/jquery-2.2.4.min.js"></script>
 	<script src="inc/js/bootstrap.min.js"></script>
 	<script src="inc/js/custom.js"></script>
 </body>

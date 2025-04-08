@@ -1,12 +1,12 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
+
+    echo '<link rel="stylesheet" href="inc/css/acustom.css">';
+
     $page = 'ibook';
     include 'inc/header.php';
     include 'inc/connection.php';
@@ -61,7 +61,7 @@
                                                     echo "<td>";
                                                    ?>
                                                         <ul>
-                                                            <li><a style="color: #fff;" href="return.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-undo-alt"></i></a></li>
+                                                            <li><a class="refrshClr" href="return.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-undo-alt"></i></a></li>
                                                             <li><a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></li>
                                                         </ul> 
                                                     <?php 

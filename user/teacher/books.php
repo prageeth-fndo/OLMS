@@ -1,11 +1,8 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["teacher"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
     $page = 'books';
     include 'inc/header.php';

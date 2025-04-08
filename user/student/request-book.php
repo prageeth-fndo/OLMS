@@ -1,11 +1,8 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["student"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
     $page = 'rbook';
     include 'inc/header.php';

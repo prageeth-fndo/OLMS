@@ -1,12 +1,12 @@
 <?php 
-     session_start();
-    if (!isset($_SESSION["student"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
-    }
+	session_start();
+	if (!isset($_SESSION["student"])) {
+		header("Location: login.php");
+		exit();
+	}
+
+	echo '<link rel="stylesheet" href="inc/css/acustom.css">';
+
     include 'inc/header.php';
     include 'inc/connection.php';
  ?>
@@ -55,7 +55,7 @@
 								if($cpass != $pass){
 									?>
 										<div class="alert alert-warning">
-											<strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">You entered wrong password</span>
+											<strong class="alrtWrnC">Invalid!</strong> <span class="alrtWrnR">You entered wrong password</span>
 										</div>
 									<?php
 								}else{
@@ -64,13 +64,13 @@
 									
 									 ?>
 										<div class="alert alert-success">
-											<strong style="color:#333">Success!</strong> <span style="color: green;font-weight: bold; ">Your password is changed.</span>
+											<strong class="alrtWrnC">Success!</strong> <span class="alrtWrnG">Your password is changed.</span>
 										</div>
 									<?php
 									}else{
 									?>
 										<div class="alert alert-warning">
-											<strong style="color:#333">Not match!</strong> <span style="color: red;font-weight: bold; ">Your password</span>
+											<strong class="alrtWrnC">Not match!</strong> <span class="alrtWrnR"> Your password</span>
 										</div>
 									<?php
 									}			

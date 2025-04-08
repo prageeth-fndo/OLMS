@@ -8,19 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thank you for registration</title>
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
-    <style>
-        body{
-            background: lightblue;
-            padding: 100px;
-        }
-        .thankyou-content{
-            width: 750px;
-            margin: 0 auto;
-        }
-       p{
-           margin-top: 30px;
-       }
-    </style>
+
 </head>
 <body>
     <div class="thankyou-content text-center">
@@ -29,7 +17,7 @@
         <p><b>Thank you...</b></p>
     </div>
 
-    <script src="inc/js/jquery-3.7.1.min.js"></script>
+    <script src="inc/js/jquery-2.2.4.min.js"></script>
     <script src="inc/js/bootstrap.min.js"></script>
 </body>
 </html>
