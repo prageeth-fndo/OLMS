@@ -12,21 +12,7 @@
 	<link rel="stylesheet" href="inc/css/pro1.css">
     <link rel="stylesheet" href="inc/css/acustom.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
-    <style>
-        .login{
-            background-image: url(inc/img/3.jpg);
-            margin-bottom: 30px;
-            padding: 50px;
-            padding-bottom: 70px;
-        }
-        .reg-header h2{
-            color: #DDDDDD;
-            z-index: 999999;
-        }
-        .login-body h4{
-            margin-bottom: 20px;
-        }
-    </style>
+
 </head>
 <body>
 	<div class="login registration">

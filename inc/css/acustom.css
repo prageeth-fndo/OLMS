@@ -8,6 +8,13 @@
     min-height: 90vh;
 }
 
+.loginT {
+    background-image: url(inc/img/3.jpg);
+    margin-bottom: 30px;
+    padding: 50px;
+    padding-bottom: 70px;
+}
+
 .registration {
     background-image: url(../img/3.jpg);
     margin-bottom: 30px;
@@ -87,6 +94,30 @@
     color: green;
     font-weight: bold;
 }
+
+.body {
+    background: lightblue;
+    padding: 100px;
+}
+
+.thankyou-content {
+    width: 850px;
+    margin: 0 auto;
+}
+
+.img {
+    margin-top: 15px;
+}
+
+.thankyou-contentT {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.p {
+    margin-top: 30px;
+}
+
 
 .thnk {
     line-height: 1.5

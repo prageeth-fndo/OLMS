@@ -1,11 +1,8 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
+        header("Location: login.php");
+        exit();
     }
 
     echo '<link rel="stylesheet" href="inc/css/acustom.css">';
@@ -171,12 +168,7 @@
                                        else{
                                           mysqli_query($link, "insert into issue_book values('','$_SESSION[utype]','$_SESSION[regno]','$_POST[name]','$_POST[sem]','$_POST[session]','$_POST[dept]','$_POST[phone]','$_POST[mail]','$_POST[booksname]','$_POST[booksissuedate]','$_POST[booksreturndate]','$_SESSION[susername]') ");
                                           mysqli_query($link, "update add_book set books_availability=books_availability-1 where books_name='$_POST[booksname]'");
-                                          ?>
-                                              <script type="text/javascript">
-                                                  alert("books issued successfully");
-                                                  window.location.href=window.location.href;
-                                              </script>
-                                        <?php
+                                          echo '<div class="alert alert-success col-lg-6 col-lg-push-3"><strong class="bookIssue">Books issued successfully.</strong></div>';
                                         }
                                     }
                                  ?>

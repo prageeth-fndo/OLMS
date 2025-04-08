@@ -8,20 +8,6 @@
     <title>Thank you for registration</title>
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
     <link rel="stylesheet" href="inc/css/acustom.css">
-    <style>
-        body{
-            background: lightblue;
-            padding: 100px;
-        }
-        .thankyou-content{
-            width: 850px;
-            margin: 0 auto;
-        }
-        img{
-            margin-top: 15px;
-        }
-
-    </style>
 </head>
 <body>
     <div class="thankyou-content text-center">

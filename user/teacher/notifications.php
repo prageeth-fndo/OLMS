@@ -1,18 +1,14 @@
     <?php 
-      session_start();
+        session_start();
         if (!isset($_SESSION["teacher"])) {
-            ?>
-                <script type="text/javascript">
-                    window.location="login.php";
-                </script>
-            <?php
+            header("Location: login.php");
+            exit();
         }
         include 'inc/header.php';
         include 'inc/connection.php';
-        mysqli_query($link,"update message set read1='y' where rusername='$_SESSION[teacher]'");
-
-     ?>
-       <!--dashboard area-->
+        mysqli_query($link, "update message set read1='y' where rusername='$_SESSION[teacher]'");
+    ?>
+    <!--dashboard area-->
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
