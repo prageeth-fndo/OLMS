@@ -1,11 +1,15 @@
 <?php 
      session_start();
-    if (!isset($_SESSION["username"])) {
-        header("Location: index.php");
-    }
-    $page = 'home';
-    include 'inc/header.php';
-    include 'inc/connection.php';
+    // Check if the user is authenticated with Google OAuth
+	if (!isset($_SESSION["user"])) {
+    echo "<h3>Unauthorized Access! Please <a href='login.php'>log in</a>.</h3>";
+    exit();
+	}
+
+   $user = $_SESSION["user"];
+   $page = 'home';
+   include 'inc/header.php';
+   include 'inc/connection.php';
  ?>
 	<!--dashboard area-->
 	<div class="dashboard-content">

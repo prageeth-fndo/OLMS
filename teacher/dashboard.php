@@ -1,8 +1,11 @@
 <?php 
 session_start();
-if(!isset($_SESSION["teacher"])) {
-    header("Location: index.php");
+if (!isset($_SESSION["user"])) {
+    echo "<h3>Unauthorized Access! Please <a href='login.php'>log in</a>.</h3>";
+    exit();
 }
+
+$user = $_SESSION["user"];
 $page = 'home';
 include 'inc/header.php';
 include 'inc/connection.php';

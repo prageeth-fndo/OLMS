@@ -1,11 +1,17 @@
 <?php
 session_start();
+
 include 'inc/connection.php';
 
 // Generate CSRF token if not already created
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
+
+// Google OAuth Credentials
+$client_id = "938792872115-jk65bb93sllatbn4hd6unkkjq46uv893.apps.googleusercontent.com";  
+$redirect_uri = "http://localhost/OLMS/auth/google/callback";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
