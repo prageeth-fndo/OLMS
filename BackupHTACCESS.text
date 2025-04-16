@@ -12,8 +12,7 @@ Options -Indexes
     Header unset X-Powered-By
 
     # Enforce CSP on ALL files, all types, all statuses
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://accounts.google.com https://apis.google.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://accounts.google.com; frame-ancestors 'self'; form-action 'self';"
-
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; form-action 'self';"
 </IfModule>
 
 # Hide server version info
