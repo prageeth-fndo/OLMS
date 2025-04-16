@@ -8,15 +8,13 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
-// Google OAuth Credentials
-$client_id = "938792872115-jk65bb93sllatbn4hd6unkkjq46uv893.apps.googleusercontent.com";  
-$redirect_uri = "http://localhost/OLMS/auth/google/callback";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="938792872115-jk65bb93sllatbn4hd6unkkjq46uv893.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+	<meta charset="UTF-8">
     <title>Library Management System</title>
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
     <link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
@@ -51,6 +49,27 @@ $redirect_uri = "http://localhost/OLMS/auth/google/callback";
                     </div>
                 </form>
             </div>
+
+            <!-- Google Sign-In -->
+            <div class="googleBtn">
+                    <div id="g_id_onload"
+                         data-client_id="938792872115-jk65bb93sllatbn4hd6unkkjq46uv893.apps.googleusercontent.com"
+                         data-context="signin"
+                         data-ux_mode="redirect"
+                         data-login_uri="http://localhost/LMS/librarian/google-callback.php"
+                         data-auto_prompt="false">
+                    </div>
+
+                    <div class="g_id_signin"
+                         data-type="icon"
+                         data-size="large"
+                         data-theme="outline"
+                         data-text="sign_in_with"
+                         data-shape="rectangular"
+                         data-logo_alignment="left"
+                         data-width="250">
+                    </div>
+                </div>
             <?php
             if (isset($_POST["login"])) {
                 // Validate CSRF token
