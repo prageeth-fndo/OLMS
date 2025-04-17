@@ -133,3 +133,4 @@ if (isset($_SESSION['student'])) {
 						</ul>
 					</div>															
 				</div>
+				<script src="dist/js/custom.js"></script>

@@ -6,9 +6,10 @@
 // });
 // });
 
-$( ".dropdown-toggle" ).click(function() {
-  $( ".dropdown-menu" ).toggle( "1000", function() {
-    // Animation complete.
+$(document).ready(function(){
+  $(".dropdown-toggle").click(function(e) {
+    e.preventDefault();
+    $(this).next(".dropdown-menu").slideToggle(300);
   });
 });
 $( ".menu-toggle1" ).click(function() {

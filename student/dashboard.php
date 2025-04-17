@@ -1,11 +1,17 @@
 <?php 
 session_start();
-if (!isset($_SESSION["user"])) {
+// Check if user is logged in (either normal login OR Google login)
+if (!isset($_SESSION["student"]) && !isset($_SESSION["user"])) {
     echo "<h3>Unauthorized Access! Please <a href='login.php'>log in</a>.</h3>";
     exit();
 }
 
-$user = $_SESSION["user"];
+// Identify who is logged in
+if (isset($_SESSION["student"])) {
+    $user = $_SESSION["student"]; // Normal login user
+} else if (isset($_SESSION["user"])) {
+    $user = $_SESSION["user"]; // Google login user
+}
 $page = 'home';
 include 'inc/header.php';
 include 'inc/connection.php';

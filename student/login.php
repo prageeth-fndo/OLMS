@@ -50,13 +50,7 @@ if (empty($_SESSION['csrf_token'])) {
                             <a class="reset_pass" href="lost-password.php">Lost your password?</a>
                         </div>
                     </form>
-                </div>
-                <div class="login-footer text-center">
-                    <div class="separator">
-                        <p class="change_link">New to site?
-                            <a href="registration.php" class="text-right"> Create Account </a>
-                        </p>
-                    </div>
+                </div>                
 
                     <!-- Google Sign-In -->
                     <div class="googleBtn">
@@ -90,7 +84,7 @@ if (empty($_SESSION['csrf_token'])) {
                         $username = trim($_POST['username']);
                         $password = trim($_POST['password']);
 
-                        $stmt = $link->prepare("SELECT * FROM std_registration WHERE username = ? AND password = ? AND status = 'yes' AND verified = 'yes'");
+                        $stmt = $link->prepare("SELECT * FROM std_registration WHERE username = ? AND password = ? AND status = 'yes'");
                         $stmt->bind_param("ss", $username, $password);
                         $stmt->execute();
                         $res = $stmt->get_result();
@@ -115,7 +109,7 @@ if (empty($_SESSION['csrf_token'])) {
         <p>&copy; All rights reserved utter pompously</p>
     </div>
 
-    <script src="inc/js/jquery-2.2.4.min.js"></script>
+    <script src="inc/js/jquery-3.7.1.min.js"></script>
     <script src="inc/js/bootstrap.min.js"></script>
     <script src="inc/js/custom.js"></script>
 </body>

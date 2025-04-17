@@ -4,7 +4,7 @@ include 'inc/connection.php'; // Include database connection
 
 $client_id = "938792872115-jk65bb93sllatbn4hd6unkkjq46uv893.apps.googleusercontent.com";
 $client_secret = "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";
-$redirect_uri = "http://localhost/OLMS/auth/google/callback";
+$redirect_uri = "http://localhost/lms/auth/google/callback";
 
 // Get authorization code
 if (!isset($_GET['code'])) {

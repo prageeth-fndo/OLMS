@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="dist/css/animate.css">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link rel="stylesheet" href="dist/css/custom.css">
+
 </head>
 <body>
 	<div class="header">
@@ -123,11 +124,11 @@
 		<p>&copy; All rights reserved utter pompously</p>
 	</div>			
 
-	<script src="dist/js/jquery-2.2.4.min.js"></script>
-	<script src="dist/js/bootstrap.min.js"></script>
+	<script src="dist/js/jquery-3.7.1.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>	
 	<script src="dist/js/fontawesome.min.js"></script>
 	<script src="dist/js/owl.carousel.min.js"></script>
 	<script src="dist/js/owl.animate.js"></script>
-	<script src="dist/js/custom.js"></script>
+	<script src="dist/js/custom.js"></script>	
 </body>
 </html>
